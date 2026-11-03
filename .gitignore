@@ -1,0 +1,9 @@
+/target/
+/dist/
+/tools/
+/artifacts/
+*.exe
+*.dll
+*.zip
+*.lnk
+*.log
