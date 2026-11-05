@@ -1,0 +1,19 @@
+[package]
+name = "quiet-rgb"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "A quiet, local RGB controller built with Rust and egui"
+license = "GPL-2.0-or-later"
+
+[dependencies]
+eframe = { version = "0.36.2", default-features = false, features = ["default_fonts", "glow", "persistence", "links"] }
+serde = { version = "1", features = ["derive"] }
+hidapi = { version = "2.6.7", default-features = false, features = ["windows-native"] }
+
+[features]
+screenshot = ["eframe/__screenshot"]
+
+[profile.release]
+opt-level = 2
+strip = true
